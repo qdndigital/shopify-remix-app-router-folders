@@ -1,7 +1,7 @@
 # Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
 
 client_id = "f074b1e056a8f5810c617baf970edc79"
-application_url = "https://example.com/"
+application_url = "https://mods-gallery-sherman-omissions.trycloudflare.com"
 embedded = true
 name = "remix-router-folders"
 handle = "remix-router-folders"
@@ -22,7 +22,15 @@ api_version = "2025-01"
 scopes = "write_products"
 
 [auth]
-redirect_urls = [ "https://example.com/api/auth" ]
+redirect_urls = [
+  "https://mods-gallery-sherman-omissions.trycloudflare.com/auth/callback",
+  "https://mods-gallery-sherman-omissions.trycloudflare.com/auth/shopify/callback",
+  "https://mods-gallery-sherman-omissions.trycloudflare.com/api/auth/callback"
+]
 
 [pos]
 embedded = false
+
+[build]
+dev_store_url = "qdn-digital.myshopify.com"
+automatically_update_urls_on_dev = true
